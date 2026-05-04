@@ -5,7 +5,7 @@ export default function Home() {
       {/* HERO SECTION */}
       
       <section style={{
-        background: "#bebebe",
+        background: "#111",
         color: "white",
         padding: "80px 20px",
         textAlign: "center"
@@ -16,8 +16,8 @@ export default function Home() {
           style={{
             width: "220px",
             maxWidth: "80%",
-            marginBottom: "24px",
-            alignContent: "center"
+            margin: "0 auto 24px auto", 
+            display: "block"
           }}
         />
 
