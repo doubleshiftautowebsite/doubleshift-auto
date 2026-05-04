@@ -437,36 +437,6 @@ export default function Home() {
             text-align: center;
           }
         }
-
-        @media (prefers-color-scheme: dark) {
-          .page {
-            background: #020617;
-            color: #f9fafb;
-          }
-
-          .section {
-            color: #f9fafb;
-          }
-
-          .card {
-            background: #111827;
-            border-color: #1f2937;
-            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
-          }
-
-          .card p,
-          .bodyText {
-            color: #d1d5db;
-          }
-
-          .brands {
-            background: #ca8a04;
-          }
-
-          .brands p {
-            color: #111827;
-          }
-        }
       `}</style>
     </main>
   );
