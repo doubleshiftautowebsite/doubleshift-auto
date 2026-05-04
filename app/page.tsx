@@ -3,12 +3,23 @@ export default function Home() {
     <main style={{ fontFamily: "Arial, sans-serif", color: "#111" }}>
       
       {/* HERO SECTION */}
+      
       <section style={{
         background: "#111",
         color: "white",
         padding: "80px 20px",
         textAlign: "center"
       }}>
+        <img
+          src="/doubleshiftlogo.jpg"
+          alt="Double Shift Automation Logo"
+          style={{
+            width: "220px",
+            maxWidth: "80%",
+            marginBottom: "24px",
+          }}
+        />
+
         <h1 style={{ fontSize: "48px", color: "#facc15" }}>
           DOUBLE SHIFT AUTOMATION
         </h1>
