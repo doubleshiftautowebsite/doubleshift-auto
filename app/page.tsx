@@ -126,9 +126,40 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="disclaimerBubble">
+        We are not direct distributors
+      </div>
+
       <style jsx>{`
         :global(*) {
           box-sizing: border-box;
+        }
+
+        .disclaimerBubble {
+          position: fixed;
+          left: 18px;
+          bottom: 18px;
+          z-index: 9999;
+          max-width: 260px;
+          padding: 12px 16px;
+          border-radius: 999px;
+          background: #111827;
+          color: #facc15;
+          border: 1px solid rgba(250, 204, 21, 0.45);
+          box-shadow: 0 14px 35px rgba(0, 0, 0, 0.28);
+          font-size: 0.85rem;
+          font-weight: 800;
+          text-align: center;
+        }
+
+        @media (max-width: 560px) {
+          .disclaimerBubble {
+            left: 12px;
+            bottom: 12px;
+            max-width: calc(100vw - 24px);
+            font-size: 0.75rem;
+            padding: 10px 13px;
+          }
         }
 
         .page {
