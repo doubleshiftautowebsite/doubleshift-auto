@@ -101,27 +101,48 @@ export default function Home() {
       </section>
 
       <section id="contact" className="contact">
-        <h2>Get Back Up and Running</h2>
-        <p>Need a quote, repair, or hard-to-find part? Contact us today.</p>
+        <div className="contactInner">
+          <p className="sectionLabel dark">Contact Us</p>
+          <h2>Get Back Up and Running</h2>
+          <p className="contactIntro">
+            Need a quote, repair, or hard-to-find part? Reach out and our team will help you get moving.
+          </p>
 
-        <div className="contactGrid">
-          <div>
-            <strong>Location</strong>
-            <p>33 South Real Rd Suite 18<br />Bakersfield, CA 93309</p>
-          </div>
+          <div className="contactGrid">
+            <div className="contactCard">
+              <span className="contactIcon">📍</span>
+              <h3>Visit Us</h3>
+              <p>
+                33 South Real Rd Suite 18<br />
+                Bakersfield, CA 93309
+              </p>
+            </div>
 
-          <div>
-            <strong>Parts</strong>
-            <p>
+            <div className="contactCard">
+              <span className="contactIcon">📞</span>
+              <h3>Sales</h3>
+              <a href="mailto:fabby@doubleshiftautomated.com">
+                fabby@doubleshiftautomated.com
+              </a>
               <a href="tel:6615731077">661-573-1077</a>
-            </p>
-          </div>
+            </div>
 
-          <div>
-            <strong>Office</strong>
-            <p>
+            <div className="contactCard">
+              <span className="contactIcon">🛠️</span>
+              <h3>Service</h3>
+              <a href="mailto:purchasing@doubleshiftautomated.com">
+                purchasing@doubleshiftautomated.com
+              </a>
               <a href="tel:6615957975">661-595-7975</a>
-            </p>
+            </div>
+
+            <div className="contactCard">
+              <span className="contactIcon">🧾</span>
+              <h3>Accounting</h3>
+              <a href="mailto:accounting@doubleshiftautomated.com">
+                accounting@doubleshiftautomated.com
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -389,35 +410,73 @@ export default function Home() {
         }
 
         .contact {
-          padding: 80px 20px;
-          text-align: center;
-          background: #111827;
+          padding: 90px 20px;
+          background:
+            radial-gradient(circle at top right, rgba(250, 204, 21, 0.16), transparent 32%),
+            linear-gradient(135deg, #050505, #111827);
           color: white;
+          text-align: center;
         }
 
-        .contact p {
+        .contactInner {
+          max-width: 1120px;
+          margin: 0 auto;
+        }
+
+        .contactIntro {
+          max-width: 680px;
+          margin: 18px auto 0;
           color: #d1d5db;
+          line-height: 1.7;
         }
 
         .contactGrid {
-          max-width: 1000px;
-          margin: 36px auto 0;
+          margin-top: 42px;
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(4, 1fr);
           gap: 18px;
         }
 
-        .contactGrid div {
-          padding: 24px;
-          border-radius: 20px;
+        .contactCard {
+          min-height: 230px;
+          padding: 28px 22px;
+          border-radius: 24px;
           background: rgba(255, 255, 255, 0.08);
-          border: 1px solid rgba(255, 255, 255, 0.12);
+          border: 1px solid rgba(250, 204, 21, 0.2);
+          box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
         }
 
-        .contact a {
+        .contactIcon {
+          font-size: 2rem;
+          margin-bottom: 14px;
+        }
+
+        .contactCard h3 {
+          margin: 0 0 14px;
+          color: #facc15;
+          font-size: 1.25rem;
+        }
+
+        .contactCard p {
+          margin: 0;
+          color: #d1d5db;
+          line-height: 1.7;
+        }
+
+        .contactCard a {
           color: #facc15;
           font-weight: 800;
           text-decoration: none;
+          overflow-wrap: anywhere;
+          margin-top: 8px;
+        }
+
+        .contactCard a:hover {
+          text-decoration: underline;
         }
 
         @media (max-width: 900px) {
@@ -427,7 +486,7 @@ export default function Home() {
 
           .split,
           .contactGrid {
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(2, 1fr);
           }
 
           .split {
@@ -452,6 +511,14 @@ export default function Home() {
 
           .cards {
             grid-template-columns: 1fr;
+          }
+
+          .contactGrid {
+            grid-template-columns: 1fr;
+          }
+
+          .contactCard {
+            min-height: auto;
           }
 
           .section,
