@@ -18,7 +18,7 @@ export async function POST(request: Request) {
 
     await resend.emails.send({
       from: "Double Shift Website <onboarding@resend.dev>",
-      to: ["fabby@doubleshiftautomated.com"],
+      to: ["joeybrianr14@gmail.com"],
       subject: "New Website Contact Form Submission",
       html: `
         <h2>New Contact Form Submission</h2>
